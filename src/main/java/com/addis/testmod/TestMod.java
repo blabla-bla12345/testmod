@@ -1,5 +1,6 @@
 package com.addis.testmod;
 
+import com.addis.testmod.block.ModBlocks;
 import com.addis.testmod.item.ModItems;
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.common.MinecraftForge;
@@ -20,6 +21,7 @@ public class TestMod {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
