@@ -3,7 +3,6 @@ package com.addis.testmod.block;
 import com.addis.testmod.TestMod;
 import com.addis.testmod.item.ModCreativeModeTab;
 import com.addis.testmod.item.ModItems;
-import com.mojang.blaze3d.shaders.Uniform;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
