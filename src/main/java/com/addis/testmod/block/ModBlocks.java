@@ -2,6 +2,7 @@ package com.addis.testmod.block;
 
 import com.addis.testmod.TestMod;
 import com.addis.testmod.block.custom.JumpyBlock;
+import com.addis.testmod.block.custom.ZirconLampBlock;
 import com.addis.testmod.item.ModCreativeModeTab;
 import com.addis.testmod.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -34,6 +35,9 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> JUMP_BLOCK = registerBlock("jump_block",
             () -> new JumpyBlock(BlockBehaviour.Properties.of(Material.STONE).strength(6).requiresCorrectToolForDrops()), ModCreativeModeTab.TEST_TAB);
+    public static final RegistryObject<Block> ZIRCON_LAMP = registerBlock("zircon_lamp",
+            () -> new ZirconLampBlock(BlockBehaviour.Properties.of(Material.STONE).strength(6).requiresCorrectToolForDrops().
+                    lightLevel(state -> state.getValue(ZirconLampBlock.LIT)? 15 : 0)), ModCreativeModeTab.TEST_TAB);
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
