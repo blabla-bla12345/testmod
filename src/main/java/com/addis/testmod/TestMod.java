@@ -2,6 +2,7 @@ package com.addis.testmod;
 
 import com.addis.testmod.block.ModBlocks;
 import com.addis.testmod.item.ModItems;
+import com.addis.testmod.painting.ModPaintings;
 import com.addis.testmod.villager.ModVillagers;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
@@ -27,6 +28,7 @@ public class TestMod {
         ModBlocks.register(modEventBus);
 
         ModVillagers.register(modEventBus);
+        ModPaintings.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

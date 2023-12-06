@@ -13,5 +13,5 @@
   "block.testmod.blueberry_crop": "Blueberry Crop",
 
   "itemGroup.testtab": "Tab To Test",
-  "entity.minecraft.villager.jump_master": "Jump Master"
+  "entity.minecraft.villager.testmod.jump_master": "Jump Master"
 }
