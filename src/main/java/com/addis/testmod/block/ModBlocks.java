@@ -34,6 +34,12 @@ public class ModBlocks {
     public static final RegistryObject<Block> DEEPSLATE_ZIRCON_ORE = registerBlock("deepslate_zircon_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(6).requiresCorrectToolForDrops(), UniformInt.of(3, 7)),
             ModCreativeModeTab.TEST_TAB);
+    public static final RegistryObject<Block> ENDSTONE_ZIRCON_ORE = registerBlock("endstone_zircon_ore",
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(6).requiresCorrectToolForDrops(), UniformInt.of(3, 7)),
+            ModCreativeModeTab.TEST_TAB);
+    public static final RegistryObject<Block> NETHERRACK_ZIRCON_ORE = registerBlock("netherrack_zircon_ore",
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(6).requiresCorrectToolForDrops(), UniformInt.of(3, 7)),
+            ModCreativeModeTab.TEST_TAB);
 
     public static final RegistryObject<Block> JUMP_BLOCK = registerBlock("jump_block",
             () -> new JumpyBlock(BlockBehaviour.Properties.of(Material.STONE).strength(6).requiresCorrectToolForDrops()), ModCreativeModeTab.TEST_TAB);
