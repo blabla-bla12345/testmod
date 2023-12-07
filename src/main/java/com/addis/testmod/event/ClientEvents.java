@@ -1,6 +1,8 @@
 package com.addis.testmod.event;
 
 import com.addis.testmod.TestMod;
+import com.addis.testmod.networking.ModMessages;
+import com.addis.testmod.networking.packet.DrinkWaterC2SPacket;
 import com.addis.testmod.util.KeyBinding;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;
@@ -18,6 +20,7 @@ public class ClientEvents {
         public static void onKeyInput(InputEvent.Key event){
             if (KeyBinding.DRINKING_KEY.consumeClick()){
                 Minecraft.getInstance().player.sendSystemMessage(Component.literal("Pressed O"));
+                ModMessages.sendToServer(new DrinkWaterC2SPacket());
             }
         }
     }

@@ -2,11 +2,10 @@ package com.addis.testmod;
 
 import com.addis.testmod.block.ModBlocks;
 import com.addis.testmod.item.ModItems;
+import com.addis.testmod.networking.ModMessages;
 import com.addis.testmod.painting.ModPaintings;
 import com.addis.testmod.villager.ModVillagers;
 import com.mojang.logging.LogUtils;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -37,6 +36,7 @@ public class TestMod {
 
     private void commonSetup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
+            ModMessages.register();
             ModVillagers.registerPOIs();
         });
     }

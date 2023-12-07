@@ -17,6 +17,9 @@
   "key.category.testmod.test": "Test Mod Keybinds",
   "key.testmod.drink_water": "Drink Water",
 
+  "message.testmod.drink_water": "Drinking water",
+  "message.testmod.no_water": "No water nearby!",
+
   "itemGroup.testtab": "Tab To Test",
   "entity.minecraft.villager.testmod.jump_master": "Jump Master"
 }
