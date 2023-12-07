@@ -14,6 +14,9 @@
   "block.testmod.zircon_lamp": "Zircon Lamp",
   "block.testmod.blueberry_crop": "Blueberry Crop",
 
+  "key.category.testmod.test": "Test Mod Keybinds",
+  "key.testmod.drink_water": "Drink Water",
+
   "itemGroup.testtab": "Tab To Test",
   "entity.minecraft.villager.testmod.jump_master": "Jump Master"
 }
