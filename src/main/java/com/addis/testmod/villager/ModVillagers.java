@@ -17,7 +17,7 @@ import java.lang.reflect.InvocationTargetException;
 
 public class ModVillagers {
     public static final DeferredRegister<PoiType> POI_TYPES = DeferredRegister.create(ForgeRegistries.POI_TYPES, TestMod.MOD_ID);
-    public static final DeferredRegister<VillagerProfession> VILLAGER_PROFESSIONS = DeferredRegister.create(ForgeRegistries.PROFESSIONS, TestMod.MOD_ID);
+    public static final DeferredRegister<VillagerProfession> VILLAGER_PROFESSIONS = DeferredRegister.create(ForgeRegistries.VILLAGER_PROFESSIONS, TestMod.MOD_ID);
 
 
     public static final RegistryObject<PoiType> JUMP_BLOCK_POI = POI_TYPES.register("jump_block_poi",

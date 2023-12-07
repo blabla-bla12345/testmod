@@ -3,5 +3,6 @@
   "parent": "block/crop",
   "textures": {
     "crop": "testmod:block/blueberry_stage5"
-  }
+  },
+  "render_type": "cutout"
 }
