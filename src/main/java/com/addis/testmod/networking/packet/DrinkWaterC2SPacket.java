@@ -1,5 +1,6 @@
 package com.addis.testmod.networking.packet;
 
+import com.addis.testmod.networking.ModMessages;
 import com.addis.testmod.thirst.PlayerThirst;
 import com.addis.testmod.thirst.PlayerThirstProvider;
 import net.minecraft.ChatFormatting;
@@ -43,11 +44,13 @@ public class DrinkWaterC2SPacket {
                 player.getCapability(PlayerThirstProvider.PLAYER_THIRST).ifPresent(thirst -> {
                     thirst.addThirst(1);
                     player.sendSystemMessage(Component.literal("Current thirst" + thirst.getThirst()).withStyle(ChatFormatting.AQUA));
+                    ModMessages.sendToPlayer(new ThirstDataSyncS2CPacket(thirst.getThirst()), player);
                 });
             } else {
                 player.sendSystemMessage(Component.translatable(MESSAGE_NO_WATER).withStyle(ChatFormatting.RED));
                 player.getCapability(PlayerThirstProvider.PLAYER_THIRST).ifPresent(thirst -> {
                     player.sendSystemMessage(Component.literal("Current thirst" + thirst.getThirst()).withStyle(ChatFormatting.AQUA));
+                    ModMessages.sendToPlayer(new ThirstDataSyncS2CPacket(thirst.getThirst()), player);
                 });
             }
 

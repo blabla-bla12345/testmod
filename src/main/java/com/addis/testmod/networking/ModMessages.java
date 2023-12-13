@@ -2,6 +2,7 @@ package com.addis.testmod.networking;
 
 import com.addis.testmod.TestMod;
 import com.addis.testmod.networking.packet.DrinkWaterC2SPacket;
+import com.addis.testmod.networking.packet.ThirstDataSyncS2CPacket;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraftforge.network.NetworkDirection;
@@ -31,6 +32,12 @@ public class ModMessages {
                 .decoder(DrinkWaterC2SPacket::new)
                 .encoder(DrinkWaterC2SPacket::toBytes)
                 .consumerMainThread(DrinkWaterC2SPacket::handle)
+                .add();
+
+        net.messageBuilder(ThirstDataSyncS2CPacket.class, id(), NetworkDirection.PLAY_TO_CLIENT)
+                .decoder(ThirstDataSyncS2CPacket::new)
+                .encoder(ThirstDataSyncS2CPacket::toBytes)
+                .consumerMainThread(ThirstDataSyncS2CPacket::handle)
                 .add();
     }
 

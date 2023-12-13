@@ -1,6 +1,7 @@
 package com.addis.testmod.event;
 
 import com.addis.testmod.TestMod;
+import com.addis.testmod.client.ThirstHudOverlay;
 import com.addis.testmod.networking.ModMessages;
 import com.addis.testmod.networking.packet.DrinkWaterC2SPacket;
 import com.addis.testmod.util.KeyBinding;
@@ -8,6 +9,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.InputEvent;
+import net.minecraftforge.client.event.RegisterGuiOverlaysEvent;
 import net.minecraftforge.client.event.RegisterKeyMappingsEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -31,6 +33,10 @@ public class ClientEvents {
         @SubscribeEvent
         public static void onKeyRegister(RegisterKeyMappingsEvent event){
             event.register(KeyBinding.DRINKING_KEY);
+        }
+        @SubscribeEvent
+        public static void registerGuiOverlays(RegisterGuiOverlaysEvent event) {
+            event.registerAboveAll("thirst", ThirstHudOverlay.HUD_THIRST);
         }
     }
 }
