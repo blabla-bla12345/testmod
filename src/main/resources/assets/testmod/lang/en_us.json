@@ -13,8 +13,9 @@
   "block.testmod.jump_block": "Jump Block",
   "block.testmod.zircon_lamp": "Zircon Lamp",
   "block.testmod.blueberry_crop": "Blueberry Crop",
+  "block.testmod.gem_infusing_station": "Gem Infusing Station",
 
-  "key.category.testmod.test": "Test Mod Keybinds",
+  "key.category.testmod.test": "Test Mod Keybindings",
   "key.testmod.drink_water": "Drink Water",
 
   "message.testmod.drink_water": "Drinking water",

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "testmod:block/gem_infusing_station",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "testmod:block/gem_infusing_station"
+    },
+    "facing=west": {
+      "model": "testmod:block/gem_infusing_station",
+      "y": 90
+    },
+    "facing=east": {
+      "model": "testmod:block/gem_infusing_station",
+      "y": 270
+    }
+  }
+}

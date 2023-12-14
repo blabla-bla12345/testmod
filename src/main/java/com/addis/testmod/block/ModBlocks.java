@@ -2,6 +2,7 @@ package com.addis.testmod.block;
 
 import com.addis.testmod.TestMod;
 import com.addis.testmod.block.custom.BlueberryCropBlock;
+import com.addis.testmod.block.custom.GemInfusingStation;
 import com.addis.testmod.block.custom.JumpyBlock;
 import com.addis.testmod.block.custom.ZirconLampBlock;
 import com.addis.testmod.item.ModCreativeModeTab;
@@ -49,6 +50,9 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> BLUEBERRY_CROP = BLOCKS.register("blueberry_crop",
             () -> new BlueberryCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT)));
+
+    public static final RegistryObject<Block> GEM_INFUSING_STATION = registerBlock("gem_infusing_station",
+            () -> new GemInfusingStation(BlockBehaviour.Properties.of(Material.METAL).strength(6).requiresCorrectToolForDrops().noOcclusion()), ModCreativeModeTab.TEST_TAB);
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
